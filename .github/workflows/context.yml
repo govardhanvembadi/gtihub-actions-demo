@@ -46,6 +46,21 @@ jobs:
 
           echo ""
 
+  job3:
+    name: special env variables
+    runs-on: ubuntu-latest
+    steps:
+      - name: summary
+        run: |
+          echo "## Build and Test Summary" >> $GITHUB_STEP_SUMMARY
+          cat $GITHUB_STEP_SUMMARY
+          
+      - name: workflow vars
+        run: echo "${{ github.workflow }}" "${{ github.run_id }}" "${{ github.run_number }}" "${{ github.sha }}"
+
+      - name: others
+        run: echo "${{ github.actor }}" "${{ github.repository }}"
+
         
       
   
