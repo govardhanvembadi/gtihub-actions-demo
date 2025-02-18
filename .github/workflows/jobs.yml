@@ -32,6 +32,7 @@ jobs:
   job3:
     name: Job 3
     runs-on: ubuntu-latest
+    if: always()
     needs:
       - job1
       - job2
