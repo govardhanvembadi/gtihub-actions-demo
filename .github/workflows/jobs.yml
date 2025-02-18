@@ -27,7 +27,7 @@ jobs:
       - name: run job 2
         run: echo Job2 running
       - name: exit job 2
-        run: exit 1
+        run: exit 0
 
   job3:
     name: Job 3
