@@ -23,15 +23,29 @@ jobs:
           GITHUB_CONTEXT: ${{ toJSON(github) }}
         run: echo "$GITHUB_CONTEXT"
 
-      - name: env variables
+      - name: env variables job1
         run: echo "${{env.var}}"
 
-      - name: env variables 2
+      - name: multiline env variables job1
+        run: |
+          echo $var
+          echo ${{env.var}}
+
+          echo ""
+  job2:
+    name: JOB 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: env variables job2
+        run: echo "${{env.var}}"
+
+      - name: multiline env variables job2
         run: |
           echo $var
           echo ${{env.var}}
 
           echo ""
 
+        
       
   
