@@ -38,7 +38,7 @@ jobs:
       - job2
     steps:
       - name: run job 3
-        run: echo Job3 is running HELLO
+        run: echo Job3 is running here
 
   
       
