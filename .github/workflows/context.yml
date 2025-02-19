@@ -44,7 +44,7 @@ jobs:
           echo $var
           echo ${{env.var}}
 
-          echo ""
+          echo "HERE"
 
   job3:
     name: special env variables
